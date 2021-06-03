@@ -1,0 +1,159 @@
+
+body{
+    background-color: #aaa;
+}
+
+a{
+    color: #eef;
+    display: block;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #eef;
+}
+
+
+.fl{
+    float: left;
+}
+
+.hdr1{
+    margin-top: 20px;
+    height: 35px;
+    font-size: 12px;
+    line-height: 35px;
+    color: #eef;
+    background-color: rgb(10,62,119);
+}
+
+.tel{
+    height: 20px;
+    margin-top: -25px;
+    padding-right: 3%;
+    float: right;
+    line-height: 15px;
+    font-size: 15px;
+}
+
+
+.hdr2{
+    height: 140px;
+    border-bottom: 1px solid rgb(7,63,110);
+    background-color: rgb(22,90,161);
+}
+
+.hdr2 > img{
+    height: 90%;
+}
+
+.srch{
+    margin-left: 5%;
+    color: darkgray;
+}
+
+
+.hdr3{
+    height: 50px;
+    color: rgb(37,97,172);
+    background:repeating-linear-gradient(rgb(175, 85, 255) 0%,rgb(22,90,161) 5%,rgb(22,90,161) 100%);
+}
+
+.hdr3 ul{
+    list-style: none;
+}
+
+.menu a:hover{
+    text-decoration: none;
+    background-color: rgb(170, 40, 40);
+}
+
+.menu li{
+    float: left;
+    text-align: center;
+    font-size: 15px;
+    width: 11%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.sub{
+    padding: 0px;
+    display: none;
+}
+
+.sub li{
+    font-size: 13px;
+    background-color: rgb(22,90,161);
+    width: 100%;
+    line-height: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.sub li a:hover{
+    color: #eef;
+    background-color: rgb(112, 158, 112);
+}
+
+
+.menu li:hover ul{
+    color:#eef;
+    display: block;
+}
+
+
+
+
+@media screen and (min-width: 1200px){
+    .hdr2 > img{
+        margin-left: 15%;
+        height: 90%;
+    }
+}
+@media screen and (max-width: 992px){
+    .container{
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+    .hdr1{
+
+        font-size: 8px;
+    }
+
+    .hdr2 > img{
+        margin-bottom: 10px;
+        margin-left: 25%;
+        height: 60%;
+    }
+
+    .srch{
+        margin-left: 35%;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .hdr1{
+        padding-left: 10%;
+        font-size: 6px;
+        height: 70px;
+        text-align: left;
+    }
+
+    .hdr2 > img{
+        margin-bottom: 10px;
+        margin-left: 15%;
+    }
+    .srch{
+        margin-left: 30%;
+    }  
+    
+    .hdr3{
+        height: 100px;
+    }
+
+    .menu > li{
+        width: 20%;
+    }
+}

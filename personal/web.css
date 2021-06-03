@@ -1,0 +1,20 @@
+a:link{
+    color:darkblue;
+  }
+  a:hover {
+    background-color:darkblue;
+    color: cyan;
+  } 
+
+  a {
+    
+    color: rgb(79, 0, 170);
+    width: 75;
+    height: 30;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .ind {
+      color: indigo;
+  }

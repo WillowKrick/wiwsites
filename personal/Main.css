@@ -1,0 +1,71 @@
+/* 链接样式设置 */
+
+  a:link{
+    color: rgb(132, 0, 255);
+  }
+  a:hover {
+    background-color: rgb(135, 0, 255);
+    color: cyan;
+  } 
+
+  a {
+    display: block;
+    color: rgb(79, 0, 170);
+    text-decoration: none;
+    font-size: 23px;
+  }
+
+  div>a {
+    display: block;
+    text-decoration: none !important;
+    background-color: skyblue;
+    color: #80a;
+    width: 33.3%;
+    height: 35px;
+    text-align: center;
+}
+  /* 行内元素设置 */
+
+  span {
+    font-size: 15;
+    display: block;
+  }
+
+  strong {
+    color:rgb(0, 0, 255);
+    font-size: 20px;
+    display: block;
+  }
+
+  /* 块元素样式设置 */
+  .dv{
+    height: 50px;
+  }
+ 
+  /* 单独颜色及样式 */
+
+  .blu {
+    color: darkblue;
+  }
+
+  .pur {
+    color:purple;
+    font-size: 20px;
+  }
+
+  .thstyle {
+    color: brown;
+    font-size: 25px;
+  }
+
+  .del {
+    text-decoration-line: line-through;
+  }
+
+  .ds {
+    text-align: end;
+  }
+  
+  .inli {
+    display: inline;
+  }

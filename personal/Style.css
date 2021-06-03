@@ -1,0 +1,34 @@
+h1 {
+color: lightcyan;
+}
+
+thead {
+    color: lightblue;
+    font-size: 25px;
+}
+
+p {
+    color: lightblue;
+}
+
+tbody {
+    color: lightcyan;
+    font-size: 15px;
+}
+
+
+.wid1 {
+    width: 200;
+}
+
+.wid2 {
+    width: 300;
+}
+
+a:link {
+    color:lightcyan;
+}
+a:hover {
+    color: lightskyblue;
+    background-color: darkblue;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Jokes?</title>
+    <script src="js/vue.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/weather.css">
+    <link rel="stylesheet" href="css/joke.css">
+</head>
+
+<body>
+
+    <div id="getJoke">
+        <h2 class="welcome">获取笑话</h2>
+        <div class="srch">
+            <button @click="getJoke">获取</button>
+            <button @click="clear">清空</button>
+        </div>
+        <div v-for=" joke in Arr" class="rs">
+            <p>{{joke}}</p>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#getJoke",
+            data: {
+                joke: "",
+                Arr: []
+            },
+            methods: {
+                getJoke: function () {
+                    var that = this;
+                    axios.get("https://autumnfish.cn/api/joke").then(function (rslt) {
+                        that.joke = rslt.data;
+                        that.Arr.push(that.joke);
+                    }).catch(function (msg) {
+                        alert("未找到任何结果");
+                    })
+                    if (this.Arr.length > 8) {
+                        this.Arr = [];
+                        alert("提示：若文本框数量大于8条会自动清空");
+                    }
+                },
+                clear: function () {
+                    this.Arr = [];
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

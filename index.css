@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+#index{
+    text-align: center;
+    color: darkgoldenrod;
+}
+
+#allfiles{
+    padding-top: 10px;
+    margin: 3%;
+    border: 2px solid skyblue;
+    border-radius: 10px;
+    width: 94%;
+    height: 2560px;
+    background-color: #ebebff;
+}
+
+#allfiles > a{
+    line-height: 50px;
+    display: block;
+    float: left;
+    text-align: center;
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+    background-color: #ed9;
+    width: 45%;
+    height: 50px;
+    text-decoration: none;
+    margin: 2%;
+    margin-top: 20px;
+}
+
+#allfiles > a:hover{
+    color: white;;
+    background-color: skyblue;
+}
+
+.webtype{
+    margin: 0;
+    text-align: center;
+    color: darkgoldenrod;
+}
