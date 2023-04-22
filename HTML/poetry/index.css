@@ -1,0 +1,180 @@
+/* 版心部分  */
+.wrapper {
+    background-color: #eee;
+    width: 1200px;
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid #aaa;
+}
+
+html body .active {
+    background-color: red !important;
+    color: white;
+}
+
+html body .wrapper h6 {
+    font-size: 20px;
+}
+
+/* 头部 */
+
+header {
+    box-sizing: border-box;
+    height: 100px;
+    background-color: #eee;
+    padding: 40px 0;
+    border-bottom: 1px solid #aaa;
+}
+
+header .logo {
+    float: left;
+    margin-left: 40px;
+}
+
+header .srch {
+    float: right;
+    margin-right: 30px;
+}
+
+/* 导航栏 */
+
+nav ul {
+    overflow: hidden;
+    padding: 20px;
+}
+
+nav li {
+    margin: 10px 20px;
+    float: left;
+    padding: 5px 5px;
+}
+
+
+/* 主体部分 */
+
+main .banner img {
+    width: 100%;
+}
+
+main>.above ul {
+    height: 150px;
+    margin: 10px 0 20px;
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+main>.above ul li {
+    padding: 0 10px;
+}
+
+
+main>.above ul li p {
+    margin: 15px 0 15px;
+}
+
+main>.above a {
+    padding: 5px;
+    background-color: grey;
+}
+
+/* 中间横图 */
+.middle {
+    justify-content: flex-end;
+    display: flex;
+    height: 140px;
+    background: url('./img/pic.png') no-repeat center/100%;
+}
+
+.middle p {
+    font-size: 22px;
+    align-self: center;
+}
+
+/* 下方内容 */
+.underneath {
+    display: flex;
+    justify-content: space-between;
+}
+
+.underneath .left {
+    margin-bottom: 20px;
+    width: 850px;
+    margin-right: 50px;
+}
+
+.underneath .right {
+    width: 300px;
+}
+
+.underneath h6 {
+    margin: 20px 0 20px 0;
+}
+
+.underneath .content .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.underneath .content .list p {
+    margin: 10px 0 0 45px;
+    display: flex;
+    flex-direction: column;
+}
+
+.underneath .left .content .list a {
+    margin-top: 10px;
+    padding: 5px;
+    align-self: self-start;
+    background-color: grey;
+}
+
+/* 下边的右边的上方 */
+.underneath .right .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.underneath .right .menu li {
+    display: flex;
+    border-bottom: 1px solid #aaa;
+}
+
+.underneath .right .menu li a {
+    font-weight: 900;
+    padding: 10px 0 10px 0;
+    color: darkred;
+}
+
+/* 下边的右边的下方 */
+.underneath .right .under .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.underneath .right .under .nav li {
+    display: flex;
+    padding: 5px 0 5px 0;
+}
+
+/* 页脚 */
+
+footer {
+    border-top: 1px solid #aaa;
+    padding: 20px;
+    padding-bottom: 0;
+    height: 50px;
+    background-color: #efefef;
+}
+
+footer>img {
+    float: left;
+    margin-right: 5px;
+}
+
+footer>div>p {
+    margin: 0;
+    float: right;
+}
