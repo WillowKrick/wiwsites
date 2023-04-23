@@ -1,17 +1,66 @@
+body,
+html {
+    height: 96%;
+}
 
 #getJoke{
+#getJoke {
+    height: 100%;
+    margin: 0 auto;
     border: 2px dashed darkgoldenrod;
     border-radius: 10px;
     width: 580px;
-    height: 1080px;
+    overflow: hidden;
+    padding-bottom: 20px;
+
 }
 
-.srch{
+.welcome {
+    color: darkgoldenrod;
+    text-align: center;
+}
+
+.srch {
     margin-left: 40%;
 }
 
-.rs{
-    margin-top: 5px;
+.srch>button {
+    border: 1px dashed darkgoldenrod;
+    margin-left: 10px;
+    border-radius: 3px;
+    height: 24px;
+    color: darkgoldenrod;
+    background-color: #ed9;
+}
+
+button:active {
+    background-color: orangered;
+    color: #fed;
+}
+
+.container {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    height: calc(100% - 100px);
+    overflow: auto;
+}
+
+.rs {
+
+    color: darkgoldenrod;
+    text-align: center;
     width: 93%;
     height: auto;
+    margin-left: 3%;
+    margin-top: 5px;
+    border: 1px solid red;
+    border-radius: 7px;
+    float: left;
+    background-color: bisque;
+}
+
+.rs>p {
+    text-align: center;
+
 }
