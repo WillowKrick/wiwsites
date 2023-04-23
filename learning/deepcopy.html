@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let data = {
+            thing: 'magic',
+            use: 'spell',
+            feature: [
+                { color: 'blueviolet', range: 'unknown' },
+                { skill: 'teleport', info: 'visible' },
+            ]
+        };
+
+
+        function deepCopy(data) {
+            const Opt = Object.prototype.toString;
+            let dataType = Opt.call(data).slice(8, -1);
+            const allowType = ["Array", "Object"]
+            if (!allowType.includes(dataType)) {
+                return data;
+            }
+            let res = dataType == 'Array' ? [] : {};
+            for (let key in data) {
+                let keyDataType = Opt.call(data).slice(8, -1);
+                if (!dataType.includes(allowType)) {
+                    res[key] = data[key];
+                    return res;
+                } else {
+                    res[key] = deepCopy(data[key]);
+                }
+            }
+            return res;
+        }
+    </script>
+</body>
+
+</html>

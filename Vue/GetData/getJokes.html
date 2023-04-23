@@ -16,12 +16,10 @@
     <div id="getJoke">
         <h2 class="welcome">获取笑话</h2>
         <div class="srch">
-
             <!-- 使用@click指令来监听DOM事件 -->
             <button @click="getJoke">获取</button>
             <button @click="clear">清空</button>
         </div>
-
         <div class="container">
             <!-- 用 v-for 指令,将保存文字的Arr数组来渲染一个列表 -->
             <div v-for="joke in Arr" class="rs">
@@ -34,7 +32,6 @@
         new Vue({
             //将当前vue组件生成的实例插入到页面的#getJoke元素中
             el: "#getJoke",
-
             data: {
                 joke: "",
                 Arr: [],
@@ -50,7 +47,6 @@
                     }).catch(function (msg) {
                         alert("未找到任何结果");
                     })
-
                 },
                 clear: function () {
                     this.Arr = [];

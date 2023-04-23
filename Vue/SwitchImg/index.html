@@ -43,15 +43,9 @@
 			},
 			methods: {
 				choice(curId) {
-					if (curId == 1) {
-						this.curId = 1;
-					} else if (curId == 2) {
-						this.curId = 2;
-					} else if (curId == 3) {
-						this.curId = 3;
-					} else {
-						this.curId = 4;
-					}
+					curId == 1 && (this.curId = 1);
+					curId == 2 && (this.curId = 2);
+					curId == 3 ? this.curId = 3 : this.curId = 4;
 				}
 			},
 		})
