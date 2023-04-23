@@ -10,35 +10,60 @@
 
 <body>
     <script>
+
+        // 深拷贝
+        // 1.借助JSON
+        // let copy = JSON.parse(JSON.stringify(data))
+        // 深拷贝函数
+        let json = `{"thing":"magic","use":"spell","feature":[{"color":"blueviolet","range":"unknown"},{"skill":"teleport","info":"visible"},["b","r","i","g","t"]]}`
+        // 转之为对象输出
+        let j = JSON.parse(json)
+        console.log(j);
+
+
         let data = {
             thing: 'magic',
             use: 'spell',
             feature: [
                 { color: 'blueviolet', range: 'unknown' },
                 { skill: 'teleport', info: 'visible' },
+                ['b', 'r', 'i', 'g', 't']
             ]
         };
 
 
         function deepCopy(data) {
             const Opt = Object.prototype.toString;
+            // 取需拷之变量类型
             let dataType = Opt.call(data).slice(8, -1);
-            const allowType = ["Array", "Object"]
+            // 断其类型，辨其是否引用类型
+            const allowType = ["Array", "Object"];
             if (!allowType.includes(dataType)) {
                 return data;
             }
+            // 存其结果
             let res = dataType == 'Array' ? [] : {};
+            // 辨data之类型，加值于res中，亦可对象历之
             for (let key in data) {
+                // 若为对象，key为属名，反之则其下标
+                // data[key]两者皆可取值
+                // d..[k..]可为基本类型，亦可引用；若基直加，若引则续拷之
+
+                // 取现历值之类型
                 let keyDataType = Opt.call(data).slice(8, -1);
                 if (!dataType.includes(allowType)) {
+                    // 若其为基类，则加之于结果
                     res[key] = data[key];
-                    return res;
+                    // console.log(key);
                 } else {
+                    // 若其仍为引，则续拷之，加之于结果
                     res[key] = deepCopy(data[key]);
                 }
             }
             return res;
         }
+        let d = deepCopy(data);
+        console.log(d);
     </script>
 </body>
 
