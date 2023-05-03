@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻斗花园与节水</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="one">BUTT</button>
+    <button class="two">bwb</button>
+    <script>
+        /*常规写法*/
+        let tmr;
+        document.querySelector('.one').onclick = function shake() {
+            console.log(document.querySelector('.one').onclick);
+            clearTimeout(tmr);
+            tmr = setTimeout(function () {
+                console.log('窝窝头免费给，嘿嘿');
+            }, 1000)
+        };
+        // 闭包写法
+        /*  function fn() {
+             let timer;
+             return function () {
+                 clearTimeout(timer);
+                 timer = setTimeout(function () {
+                     console.log("failed to compute but Never gonna give you up");
+                 }, 1000);
+             }
+         }
+         document.querySelector('.one').onclick = fn(); */
+
+        // 封装函数写法
+        // document.querySelector('.one').onclick = antiShake(function (e) {
+        //     console.log('成功');
+        // });
+        function antiShake(handler, time = 1000) {
+            let timer;
+            return function (ev) {
+                clearTimeout(timer);
+
+                timer = setTimeout(() => {
+                    handler.call(this, ev);
+                }, time)
+            }
+        }
+        //
+        //节流
+        //1.
+        /*   function throttle(handler, time) {
+              let begin = Date.now();
+              return function () {
+                  let now = Date.now();
+                  if (now - begin > time) {
+                      handler();
+                      begin = now;
+                  }
+              }
+          } */
+        //2
+        function thro(handler, wait) {
+            let tr;
+            return function () {
+                if (tr) return;
+                tr = setTimeout(function () {
+                    handler();
+                    tr = null;
+                }, wait);
+            }
+        }
+        document.querySelector('.two').onclick = thro(function () {
+            console.log('slide finished');
+        }, 1000);
+    </script>
+</body>
+
+</html>
