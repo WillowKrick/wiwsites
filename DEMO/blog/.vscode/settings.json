@@ -1,0 +1,8 @@
+{
+	"editor.tabSize": 2,
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"workbench.editor.wrapTabs": true,
+	"files.autoGuessEncoding": true,
+	"liveServer.settings.port": 5511
+}

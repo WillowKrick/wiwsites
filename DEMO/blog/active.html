@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>账户激活</title>
+</head>
+
+<body>
+	<script src="./static/layui/layui.all.js"></script>
+	<script src="./static/javascript/utils.js"></script>
+	<script>
+		window.addEventListener('load', function () {
+			let code = strToObject(location.search.substring(1)).activeCode;
+			if (!code) {
+				layer.msg('do you know you offended the law?', {
+					icon: 5
+				});
+				return;
+			}
+
+			let top = layer.load(1, {
+				shade: [0.1, '#fff'] //0.1透明度的白色背景
+			});
+			ajax({
+				url: basicUrl + '/user/active',
+				data: { code },
+				success: function (feedBack) {
+					layer.close(top);
+					if (feedBack.code != 0) {
+						layer.msg('get out of the door turn left is policeBox');
+						return;
+					}
+					window.location.href = 'login.html';
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>
